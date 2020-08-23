@@ -4,6 +4,7 @@
 <@c.page>
     <div>
         <@l.logout />
+        <span><a href="/user">Список пользователей</a></span>
     </div>
     <a href="/addBook">Добавить книгу</a>
     <div>Список книг</div>
@@ -15,14 +16,14 @@
     <#if allbooks??>
         <#list allbooks as book>
             <div>
-               <span>${book.getBookID()}</span>
-               <b>${book.getTitle()}</b>
+                <span>${book.getBookID()}</span>
+                <b>${book.getTitle()}</b>
                 <i> Автор(ы): </i>
-             <#list book.getAuthors() as author>
-                 <span>[${author.getNameAuthor()}]</span>
-             <#else>
-                 автор не указан
-             </#list>
+                <#list book.getAuthors() as author>
+                    <span>[${author.getNameAuthor()}]</span>
+                <#else>
+                    автор не указан
+                </#list>
                 <i> Тэги: </i>
                 <#list book.getTags() as tag>
                     <span>[${tag.getNameTag()}]</span>

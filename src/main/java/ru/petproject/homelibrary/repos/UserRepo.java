@@ -5,4 +5,5 @@ import ru.petproject.homelibrary.domain.User;
 
 public interface UserRepo extends JpaRepository<User, Integer> {
     User findByUsername(String username);
+    User findByUserID(Integer userID);
 }

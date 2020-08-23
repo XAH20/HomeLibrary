@@ -11,7 +11,6 @@ import ru.petproject.homelibrary.service.BooksService;
 import ru.petproject.homelibrary.service.MainService;
 
 @Controller
-//@RequestMapping("/books")
 public class BooksController {
 
     private BooksService booksService;
